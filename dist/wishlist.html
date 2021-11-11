@@ -16,11 +16,11 @@
     <header class="py-4 shadow-sm bg-white">
         <div class="container flex items-center justify-between">
             <!-- logo -->
-            <a href="#">
+            <a href="../index.html">
                 <img src="./images/logo.svg" alt="logo">
             </a>
             <!-- searchbar -->
-            <div class="w-full max-w-xl relative flex">
+            <div class="w-full max-w-xl relative flex sm:absolute sm:top-32 sm:left-0">
                 <span class="absolute left-4 top-3 text-lg text-gray-400">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </span>
@@ -32,7 +32,7 @@
             </div>
             <!-- icons -->
             <div class="flex items-center space-x-4">
-                <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
+                <a href="./wishlist.html" class="text-center text-gray-700 hover:text-primary transition relative">
                     <div class="text-2xl">
                         <i class="fa-regular fa-heart"></i>
                     </div>
@@ -48,7 +48,7 @@
                     <span
                         class="absolute -right-3 -top-1 w-5 h-5 bg-primary text-white text-xs rounded-full flex items-center justify-center">8</span>
                 </a>
-                <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
+                <a href="./profile-info.html" class="text-center text-gray-700 hover:text-primary transition relative">
                     <div class="text-2xl">
                         <i class="fa-regular fa-user"></i>
                     </div>
@@ -60,15 +60,15 @@
     <!-- Header end-->
     <!-- navbar  -->
     <nav class="bg-gray-800">
-        <div class="container flex">
+        <div class="container flex relative">
             <!-- all category -->
-            <div class="px-8 py-4 bg-primary flex items-center cursor-pointer relative group">
+            <div class="px-8 py-4 sm:py-3.5 bg-primary flex items-center cursor-pointer relative group">
                 <span class="text-white">
                     <i class="fa-solid fa-bars"></i>
                 </span>
                 <span class="capitalize ml-2 text-white">All category</span>
                 <div
-                    class="absolute w-full top-full left-0 bg-white shadow-md py-3 divide-y divide-gray-300 divide-dashed invisible group-hover:visible transition">
+                    class="absolute w-full top-full left-0 bg-white shadow-md py-3 divide-y divide-gray-300 divide-dashed invisible group-hover:visible transition z-50">
                     <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
                         <i class="fa-solid fa-bed text-primary"></i>
                         <span class="ml-6 text-gray-600 text-sm">Bedroom</span>
@@ -93,14 +93,20 @@
             </div>
             <!-- all category end -->
             <!-- navbar links -->
-            <div class="flex items-center justify-between pl-12 flex-grow">
-                <div class="flex items-center space-x-6 capitalize">
-                    <a href="index.html" class="text-gray-200 hover:text-white transition">Home</a>
-                    <a href="shop.html" class="text-gray-200 hover:text-white transition">shop</a>
+            <div
+                class="flex items-center justify-between pl-12 sm:pl-3 flex-grow sm:justify-between group sm:items-start sm:py-3.5">
+                <span class="text-white invisible sm:visible sm:order-3">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </span>
+                <div
+                    class="flex items-center space-x-6 capitalize sm:flex-col sm:space-x-0 sm:space-y-4 sm:absolute sm:right-0 sm:bg-black sm:top-full sm:pl-6 sm:pr-6 sm:py-4 sm:invisible sm:group-hover:visible z-50">
+                    <a href="../index.html"
+                        class="text-gray-200 hover:text-white transition sm:hover:text-primary">Home</a>
+                    <a href="dist/shop.html" class="text-gray-200 hover:text-white transition">shop</a>
                     <a href="#" class="text-gray-200 hover:text-white transition">About us</a>
                     <a href="#" class="text-gray-200 hover:text-white transition">Contact us</a>
                 </div>
-                <a href="login.html" class="text-gray-200 hover:text-white transition">Login/Register</a>
+                <a href="./register.html" class="text-gray-200 hover:text-white transition">Login/Register</a>
 
             </div>
             <!-- navbar links end -->
@@ -109,7 +115,7 @@
     <!-- navbar end -->
 
     <!-- breadcrums -->
-    <div class="container py-4 flex items-center gap-3">
+    <div class="container py-4 flex items-center gap-3 sm:mt-12">
         <a href="index.html" class="text-primary text-base">
             <i class="fas fa-home"></i>
         </a>
@@ -123,7 +129,7 @@
     <!-- Account wrapper -->
     <div class="container grid grid-cols-12 items-start gap-6 pt-4 pb-16">
         <!-- sidebar -->
-        <div class="col-span-3">
+        <div class="col-span-3 sm:col-span-12">
             <!-- account profile -->
             <div class="px-4 py-3 shadow flex items-center gap-4">
                 <div class="flex-shrink-0">
@@ -215,23 +221,24 @@
         <!-- sidebar end -->
 
         <!-- Wish list -->
-        <div class="col-span-9 space-y-4">
+        <div class="col-span-9 sm:col-span-12 space-y-4">
             <!-- single wishlist -->
-            <div class="flex items-center justify-between gap-6 p-4 border border-gray-200 rounded shadow">
+            <div
+                class="flex items-center justify-between gap-6 sm:gap-2 p-4 sm:p-1 border border-gray-200 rounded shadow">
                 <!-- wishlist image -->
-                <div class="w-28 flex-shrink-0">
+                <div class="w-28 sm:w-20 flex-shrink-0">
                     <img src="./images/product9.jpg" class="w-full" alt="product-photo">
                 </div>
                 <!-- wishlist image end -->
 
                 <!-- wishlist content -->
                 <div class="w-1/3">
-                    <h2 class="text-gray-800 text-xl font-medium uppercase">Italian L Shape Sofa</h2>
-                    <p class="text-gray-500">Availability: <span class="text-green-600">In Stock</span> </p>
+                    <h2 class="text-gray-800 text-xl sm:text-sm font-medium uppercase">Italian L Shape Sofa</h2>
+                    <p class="text-gray-500 sm:text-xs">Availability: <span class="text-green-600">In Stock</span> </p>
                 </div>
                 <!-- wishlist content end -->
-                <div class="text-primary text-lg font-semibold">Tk. 2000.00</div>
-                <a href="#" class="px-6 py-2 bg-primary text-center text-white border border-primary rounded hover:bg-transparent hover:text-primary transition font-roboto
+                <div class="text-primary text-lg sm:text-sm font-semibold">Tk. 2000.00</div>
+                <a href="#" class="px-6 sm:px-1 py-2 sm:py-1 sm:text-xs bg-primary text-center text-white border border-primary rounded hover:bg-transparent hover:text-primary transition font-roboto
                 ">Add to card</a>
                 <a href="#" class="text-gray-600 cursor-pointer hover:text-primary">
                     <i class="fas fa-trash"></i>
@@ -239,21 +246,22 @@
             </div>
             <!-- single wishlist end -->
             <!-- single wishlist -->
-            <div class="flex items-center justify-between gap-6 p-4 border border-gray-200 rounded shadow">
+            <div
+                class="flex items-center justify-between gap-6 sm:gap-2 p-4 sm:p-1 border border-gray-200 rounded shadow">
                 <!-- wishlist image -->
-                <div class="w-28 flex-shrink-0">
+                <div class="w-28 sm:w-20 flex-shrink-0">
                     <img src="./images/product9.jpg" class="w-full" alt="product-photo">
                 </div>
                 <!-- wishlist image end -->
 
                 <!-- wishlist content -->
                 <div class="w-1/3">
-                    <h2 class="text-gray-800 text-xl font-medium uppercase">Italian L Shape Sofa</h2>
-                    <p class="text-gray-500">Availability: <span class="text-red-600">Out of Stock</span> </p>
+                    <h2 class="text-gray-800 text-xl sm:text-sm font-medium uppercase">Italian L Shape Sofa</h2>
+                    <p class="text-gray-500 sm:text-xs">Availability: <span class="text-green-600">In Stock</span> </p>
                 </div>
                 <!-- wishlist content end -->
-                <div class="text-primary text-lg font-semibold">Tk. 2000.00</div>
-                <a href="#" class="cursor-not-allowed px-6 py-2 bg-red-400 text-center text-white border border-red-400 rounded font-roboto
+                <div class="text-primary text-lg sm:text-sm font-semibold">Tk. 2000.00</div>
+                <a href="#" class="px-6 sm:px-1 py-2 sm:py-1 sm:text-xs bg-primary text-center text-white border border-primary rounded hover:bg-transparent hover:text-primary transition font-roboto
                 ">Add to card</a>
                 <a href="#" class="text-gray-600 cursor-pointer hover:text-primary">
                     <i class="fas fa-trash"></i>
@@ -267,24 +275,28 @@
 
     <!-- footer -->
     <footer class="bg-white pt-16 pb-12 border-t border-gray-100">
-        <div class="container grid grid-cols-3">
+        <div class="container grid grid-cols-3 sm:grid-cols-1">
             <!-- footer text -->
-            <div class="col-span-1 space-y-8">
+            <div class="col-span-1 space-y-8 sm:mb-8">
                 <img src="./images/logo.svg" alt="logo" class="w-30">
                 <p class="text-gray-500">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, nostrum?
                 </p>
                 <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <a href="https://www.facebook.com/robiidb" target="_blank"
+                        class="text-gray-400 hover:text-gray-500">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <a href="https://mobile.twitter.com/Robiul_it" target="_blank"
+                        class="text-gray-400 hover:text-gray-500">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <a href="https://www.instagram.com/robiulrobi26/" target="_blank"
+                        class="text-gray-400 hover:text-gray-500">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <a href="https://www.linkedin.com/in/robiul-robi/" target="_blank"
+                        class="text-gray-400 hover:text-gray-500">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
@@ -292,7 +304,7 @@
             <!-- footer text end -->
 
             <!-- footer links -->
-            <div class="col-span-2 grid grid-cols-2 gap-8">
+            <div class="col-span-2 sm:col-span-1 grid grid-cols-2 sm:grid-cols-1 gap-8">
                 <div class="grid grid-cols-2 gap-8">
                     <div>
                         <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Solutions</h3>
@@ -341,9 +353,9 @@
     <!-- footer end -->
     <!-- copyright -->
     <div class="bg-gray-800 py-4">
-        <div class="container flex items-center justify-between">
+        <div class="container flex items-center justify-between sm:flex-col sm:space-y-2">
             <p class="text-white">&copy; copyright 2021. Developed by Robiul.</p>
-            <img class="h-5" src="./images/payment-method.png" alt="payment-method-photo">
+            <img class="h-5" src="./dist/images/payment-method.png" alt="payment-method-photo">
         </div>
     </div>
     <!-- copyright end -->
